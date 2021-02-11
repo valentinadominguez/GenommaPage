@@ -613,83 +613,23 @@ ul#tabs li.category_tab.active {
 }
 
 /* CARDS */
-@media (min-width: 768px) {
-/* show 3 items */
-    .carousel-inner .active,
-    .carousel-inner .active + .carousel-item,
-    .carousel-inner .active + .carousel-item + .carousel-item {
-      display: block;
-    }
-  
-    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
-    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item,
-    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item {
-      transition:none;
-    }
-  
-    .carousel-inner .carousel-item-next,
-    .carousel-inner .carousel-item-prev {
-      position: relative;
-      transform: translate3d(0,0,0);
-    }
-  
-.carousel-inner .active.carousel-item + .carousel-item + .carousel-item + .carousel-item {
-    right: -33.3333%;
-    z-index: -1;
-    display: block;
-    visibility: visible;
-}
-  
-/* left or forward direction */
-    .active.carousel-item-left + .carousel-item-next.carousel-item-left,
-    .carousel-item-next.carousel-item-left + .carousel-item,
-    .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item,
-    .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item {
-      position: relative;
-      transform: translate3d(-100%,0,0);
-      visibility: visible;
-    }
-  
-    /* farthest right hidden item must be abso position for animations */
-    .carousel-inner .carousel-item-prev.carousel-item-right {
-      left: 0;
-      z-index: -1;
-      display: block;
-      visibility: visible;
-    }
-  
-/* right or prev direction */
-    .active.carousel-item-right + .carousel-item-prev.carousel-item-right,
-    .carousel-item-prev.carousel-item-right + .carousel-item,
-    .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item,
-    .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item {
-      position: relative;
-      transform: translate3d(100%,0,0);
-      visibility: visible;
-      display: block;
-      visibility: visible;
-    }
-  }
-  
-.card-body{
-    cursor: pointer;
-}
 
-.img-fluid{
-    cursor: pointer;
-}
-
-#myCarousel .carousel-control-next,#myCarousel  .carousel-control-prev {
-    width: 50px;
-    background-color: darkblue;
-    height: 50px;
-    border-radius: 10px;
-    z-index: 1;
-    top: 0;
-    bottom: 0;
+.containerProducts{
+    width: 1170px;
     margin: auto;
+    padding: 0 10px;
 }
 
+.containerProducts.active{
+    display: block;
+}
+
+.containerProducts:not(.active){
+    display: none;
+}
+.card{
+    margin-right: 20px;
+}
 
 /* Imagen hombre */
 .home-wide-container {
@@ -700,7 +640,6 @@ ul#tabs li.category_tab.active {
 
 .containerCarrousel{
     justify-content: center;
-    width: auto;
     flex-direction: column;
     height: auto;
     width: 1170px;
@@ -731,13 +670,7 @@ ul#tabs li.category_tab.active {
     text-align: center;
 }
 
-/* #owl-demo{
-    position: relative;
-    overflow: hidden;
-    width: auto;  
-} */
-
-.owl-item {
+#owl-demo .owl-item {
     justify-content: center;
     display: flex;
     height: 90px!important;
@@ -755,12 +688,6 @@ ul#tabs li.category_tab.active {
     box-sizing: border-box;
     justify-content: center;
 }
-
-/*.owl-carousel .owl-theme {
-    position: relative;
-    min-height: 1px;
-    width: auto;
-}*/
 
 #owl-demo .item img{
     display: block;
